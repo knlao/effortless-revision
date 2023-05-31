@@ -4,6 +4,10 @@ This is a little web project for me to revise different stuff at school.
 
 🔴 This is heavily in development❗🔴
 
+As for the link, the instruction in the index page is very unclear, I might change it some days later.
+
+Example link: http://localhost:3000/eng/3b-u7/definition/word/blanks
+
 # Original Next.js md below
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
