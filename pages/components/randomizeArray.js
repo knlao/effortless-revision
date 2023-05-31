@@ -1,7 +1,6 @@
 function randomizeArray(arr) {
     let array = arr;
-    var tmp, current, top = array.length;
-    if (!arr) throw Error("arr is undefined");
+    var tmp, current, top = array?.length;
     if (top) while (--top) {
         current = Math.floor(Math.random() * (top + 1));
         tmp = array[current];
