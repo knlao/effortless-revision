@@ -1,28 +1,28 @@
 export default function handler(req, res) {
     res.status(200).json([
         {
-            "word": "H",
-            "definition": "氫"
+            "symbol": "H",
+            "chi": "氫"
         },
         {
-            "word": "He",
-            "definition": "氦"
+            "symbol": "He",
+            "chi": "氦"
         },
         {
-            "word": "Li",
-            "definition": "鋰"
+            "symbol": "Li",
+            "chi": "鋰"
         },
         {
-            "word": "Be",
-            "definition": "鈹"
+            "symbol": "Be",
+            "chi": "鈹"
         },
         {
-            "word": "B",
-            "definition": "硼"
+            "symbol": "B",
+            "chi": "硼"
         },
         {
-            "word": "C",
-            "definition": "碳"
+            "symbol": "C",
+            "chi": "碳"
         }
     ])
   }

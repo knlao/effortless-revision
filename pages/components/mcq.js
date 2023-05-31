@@ -15,6 +15,9 @@ function MCQ(props) {
   const words = randomizeArray(props.words);
   console.log(words);
 
+  const a = props.a;
+  const b = props.b;
+
   const [lastAttempt, setLastAttempt] = useState(false);
 
   function handleSubmit(index) {
@@ -24,7 +27,7 @@ function MCQ(props) {
       setCorrect(correct + 1);
     } else {
       setLastAttempt(false);
-      setMessage("You are wrong! The correct answer is " + words[correctIndex].word);
+      setMessage("You are wrong! The correct answer is " + words[correctIndex][b]);
       setIncorrect(incorrect + 1);
     }
     setTotal(total + 1);
@@ -32,11 +35,11 @@ function MCQ(props) {
 
   return (
     <div>
-      <h1 className="text-3xl font-bold pb-3">Question: {words[correctIndex].definition}</h1>
+      <h1 className="text-3xl font-bold pb-3">Question: {words[correctIndex][a]}</h1>
       {words.filter((word, i) => i <= items - 1).map((word, i) => (
         <div key={i} className="border-2 rounded-md border-slate-500 my-4 px-3
         ">
-          <Choice index={i} content={word.word} handleSubmit={handleSubmit}></Choice>
+          <Choice index={i} content={word[b]} handleSubmit={handleSubmit}></Choice>
         </div>
       ))}
       <p className={`${lastAttempt === true ? "text-green-500" : "text-red-600"}`}>{message}</p>

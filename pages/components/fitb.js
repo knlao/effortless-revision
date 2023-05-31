@@ -13,12 +13,15 @@ function FITB(props) {
   const [word, setWord] = useState('');
 
   const [lastAttempt, setLastAttempt] = useState(false);
+
+  const a = props.a;
+  const b = props.b;
   
   useEffect(() => {
     const words = randomizeArray(props.words);
 
-    setDefinition(words[0].definition)
-    setWord(words[0].word)
+    setDefinition(words[0][props.a])
+    setWord(words[0][props.b])
 
     setInput('')
   }, [total, props]);

@@ -2,13 +2,13 @@ import Link from 'next/link';
 import { useRouter } from 'next/router'
 import { useState, useEffect } from 'react';
 
-import useFetch from '../../components/useFetch';
-import MCQ from './../../components/mcq';
-import FITB from '../../components/fitb';
+import useFetch from '../../../../components/useFetch';
+import MCQ from '../../../../components/mcq';
+import FITB from '../../../../components/fitb';
 
 function App() {
   const router = useRouter()
-  const { mode, subject, unit } = router.query
+  const { subject, unit, a, b, mode } = router.query
 
   const [apiLink, setApiLink] = useState("");
 
@@ -21,9 +21,9 @@ function App() {
 
   let content = null;
   if (mode === "choices") {
-    content = <MCQ words={data}></MCQ>;
+    content = <MCQ words={data} a={a} b={b}></MCQ>;
   } else if (mode === "blanks") {
-    content = <FITB words={data}></FITB>
+    content = <FITB words={data} a={a} b={b}></FITB>
   }
 
   return (
