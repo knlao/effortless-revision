@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Choice from './choice.js';
-import randomizeArray from './randomizeArray';
+import randomizeArray from './randomizeArray.js';
 
 function MCQ(props) {
   const items = 4;

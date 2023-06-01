@@ -7,8 +7,8 @@
 // export default MyApp
 
 import '../styles/globals.css'
-import Footer from './components/footer';
-import Header from './components/header';
+import Footer from '../src/components/footer';
+import Header from '../src/components/header';
 
 function MyApp({ Component, pageProps }) {
   return (

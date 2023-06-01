@@ -1,5 +1,3 @@
-import Units from "./components/units";
-
 function Index() {
   // const 
 
@@ -86,7 +84,6 @@ function Index() {
         </tbody>
       </table>
       <p className="mt-2">unit:</p>
-      <Units></Units>
     </div>
   );
 }
