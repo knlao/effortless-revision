@@ -35,7 +35,7 @@ function FITB(props) {
       setCorrect(correct + 1);
     } else {
       setLastAttempt(false);
-      setMessage("You are wrong! The correct answer is " + word);
+      setMessage("You are wrong! The correct answer is " + word + " Your answer is " + input);
       setIncorrect(incorrect + 1);
     }
     setTotal(total + 1);

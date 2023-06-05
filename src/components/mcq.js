@@ -27,7 +27,7 @@ function MCQ(props) {
       setCorrect(correct + 1);
     } else {
       setLastAttempt(false);
-      setMessage("You are wrong! The correct answer is " + words[correctIndex][b]);
+      setMessage("You are wrong! The correct answer is " + words[correctIndex][b] + " Your answer is " + words[index][b]);
       setIncorrect(incorrect + 1);
     }
     setTotal(total + 1);
