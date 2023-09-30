@@ -8,6 +8,14 @@ As for the link, the instruction in the index page is very unclear, I might chan
 
 Example link: http://localhost:3000/eng/3b-u7/definition/word/blanks
 
+/subject/unit/question/answer/mode
+
+## About the code of this project
+
+This is made with the Next.js framework with Tailwind CSS for the styles.
+
+Code 100% original
+
 # Original Next.js md below
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
