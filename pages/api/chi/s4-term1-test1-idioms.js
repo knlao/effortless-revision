@@ -141,7 +141,7 @@ export default function handler(req, res) {
             "pinyin": "bù fǎ cháng kě"
         },
         {
-            "word": "不脛【徑】而走",
+            "word": "不脛而走",
             "pinyin": "bù jìng ér zǒu"
         },
         {
