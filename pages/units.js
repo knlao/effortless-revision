@@ -28,7 +28,7 @@ function About() {
                                 <td class="py-4">{d.title}</td>
                                 <td class="py-4">{d.year}</td>
                                 <td class="py-4">{d.description}</td>
-                                <Link className="underline decoration-solid text-blue-400" href={"/" + d.subject + "/" + d.title}>Go</Link>
+                                <td class="py-4"><Link className="underline decoration-solid text-blue-400" href={"/" + d.subject + "/" + d.title}>Go</Link></td>
                             </tr>
                         ))}
 
