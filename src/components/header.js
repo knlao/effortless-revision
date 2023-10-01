@@ -6,6 +6,7 @@ function Header() {
             <Link className="mx-8 text-white text-xl font-bold" href="/">Effortless Revision</Link>
             <Link className="mx-4 text-white text-sm" href="/about">About</Link>
             <Link className="mx-4 text-white text-sm" href="/units">Units</Link>
+            <Link className="mx-4 text-white text-sm" href="/shortcut">Shortcut</Link>
         </div>
     );
 }

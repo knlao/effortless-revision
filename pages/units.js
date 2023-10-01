@@ -6,19 +6,19 @@ function About() {
     const { data, isPending, error } = useFetch("/api");
 
     return (
-        <div className="w-1/2">
+        <div className="w-full">
             <p className="text-xl font-bold">List of Units</p>
             {error && <div>{error}</div>}
             {isPending && <div>Loading...</div>}
-            {data && <div>
-                <table class="w-full text-sm text-center text-gray-900">
+            {data && <div class="overflow-x-auto">
+                <table class="text-sm text-center text-gray-900">
                     <thead class="text-xs uppercase bg-gray-50">
                         <tr>
-                            <th scope="col" class="py-3 px-16">Subject</th>
-                            <th scope="col" class="py-3 px-16">Title</th>
-                            <th scope="col" class="py-3 px-16">Year</th>
-                            <th scope="col" class="py-3 px-32">Description</th>
-                            <th scope="col" class="py-3 px-16">Go</th>
+                            <th scope="col" class="py-3 px-6">Subject</th>
+                            <th scope="col" class="py-3 px-6">Title</th>
+                            <th scope="col" class="py-3 px-6">Year</th>
+                            <th scope="col" class="py-3 px-16">Description</th>
+                            <th scope="col" class="py-3 px-6">Go</th>
                         </tr>
                     </thead>
                     <tbody>
