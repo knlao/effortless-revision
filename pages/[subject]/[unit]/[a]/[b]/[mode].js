@@ -24,6 +24,8 @@ function App() {
     content = <MCQ words={data} a={a} b={b}></MCQ>;
   } else if (mode === "blanks") {
     content = <FITB words={data} a={a} b={b}></FITB>
+  } else {
+    content = <div>not found</div>
   }
 
   /*
