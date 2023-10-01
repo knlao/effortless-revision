@@ -19,15 +19,25 @@ function MCQ(props) {
   const b = props.b;
 
   const [lastAttempt, setLastAttempt] = useState(false);
+  
+  const [prevQuestion, setPrevQuestion] = useState("");
+  const [prevCorrectAns, setPrevCorrectAns] = useState("");
+  const [prevUserAns, setPrevUserAns] = useState("");
 
   function handleSubmit(index) {
     if (index === correctIndex) {
       setLastAttempt(true);
       setMessage("You got the correct answer!");
+      setPrevQuestion(words[correctIndex][a]);
+      setPrevCorrectAns(words[correctIndex][b]);
+      setPrevUserAns(words[index][b]);
       setCorrect(correct + 1);
     } else {
       setLastAttempt(false);
-      setMessage("You are wrong! The correct answer is " + words[correctIndex][b] + " Your answer is " + words[index][b]);
+      setMessage("You are wrong!");
+      setPrevQuestion(words[correctIndex][a]);
+      setPrevCorrectAns(words[correctIndex][b]);
+      setPrevUserAns(words[index][b]);
       setIncorrect(incorrect + 1);
     }
     setTotal(total + 1);
@@ -43,6 +53,28 @@ function MCQ(props) {
         </div>
       ))}
       <p className={`${lastAttempt === true ? "text-green-500" : "text-red-600"}`}>{message}</p>
+      
+      <br></br>
+      
+      <table>
+        <tbody>
+          <tr>
+            <td className='pr-6'>Previous Question:</td>
+            <td>{prevQuestion}</td>
+          </tr>
+          <tr>
+            <td>Correct Answer:</td>
+            <td>{prevCorrectAns}</td>
+          </tr>
+          <tr>
+            <td>Your Answer:</td>
+            <td>{prevUserAns}</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <br></br>
+
       <p>Total: {total}</p>
       <p>Correct: {correct}</p>
       <p>Wrong: {incorrect}</p>

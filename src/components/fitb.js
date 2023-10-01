@@ -14,6 +14,10 @@ function FITB(props) {
 
   const [lastAttempt, setLastAttempt] = useState(false);
 
+  const [prevQuestion, setPrevQuestion] = useState("");
+  const [prevCorrectAns, setPrevCorrectAns] = useState("");
+  const [prevUserAns, setPrevUserAns] = useState("");
+
   const a = props.a;
   const b = props.b;
   
@@ -29,13 +33,19 @@ function FITB(props) {
   function handleSubmit(e) {
     e.preventDefault();
     console.log(input);
-    if (input === word) {
+    if (input.trim() === word.trim()) {
       setLastAttempt(true);
       setMessage("You got the correct answer!");
+      setPrevQuestion(definition);
+      setPrevCorrectAns(word);
+      setPrevUserAns(input);
       setCorrect(correct + 1);
     } else {
       setLastAttempt(false);
-      setMessage("You are wrong! The correct answer is " + word + " Your answer is " + input);
+      setMessage("You are wrong!");
+      setPrevQuestion(definition);
+      setPrevCorrectAns(word);
+      setPrevUserAns(input);
       setIncorrect(incorrect + 1);
     }
     setTotal(total + 1);
@@ -52,8 +62,30 @@ function FITB(props) {
       <form onSubmit={handleSubmit}>
         <input type="text" value={input} onChange={handleChange} className="border-solid border-2 border-b-black w-full py-1" />
       </form>
-      
+
       <p className={`${lastAttempt === true ? "text-green-500" : "text-red-600"}`}>{ message }</p>
+      
+      <br></br>
+
+      <table>
+        <tbody>
+          <tr>
+            <td className='pr-6'>Previous Question:</td>
+            <td>{prevQuestion}</td>
+          </tr>
+          <tr>
+            <td>Correct Answer:</td>
+            <td>{prevCorrectAns}</td>
+          </tr>
+          <tr>
+            <td>Your Answer:</td>
+            <td>{prevUserAns}</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <br></br>
+
       <p>Total: {total}</p>
       <p>Correct: {correct}</p>
       <p>Wrong: {incorrect}</p>
