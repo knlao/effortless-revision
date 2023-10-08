@@ -27,15 +27,21 @@ export default function handler(req, res) {
             },
             {
                 "subject": "chem",
-                "title": "chemical-solubility",
-                "year": "/",
-                "description": "Determine if a chemical is 可溶, 微溶 or 不可溶"
-            },
-            {
-                "subject": "chem",
                 "title": "ion-colors",
                 "year": "/",
                 "description": "Some of the very common colors of ions in chemisty"
+            },
+            {
+                "subject": "chem",
+                "title": "ion-names",
+                "year": "/",
+                "description": "Some of the very common names of ions in chemisty"
+            },
+            {
+                "subject": "chem",
+                "title": "chemical-solubility",
+                "year": "/",
+                "description": "Determine if a chemical is 可溶, 微溶 or 不可溶"
             },
             {
                 "subject": "chi",
