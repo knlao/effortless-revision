@@ -1,0 +1,1 @@
+export default function handler(req, res) { res.status(200).json([{"ion":"銅離子","color":"藍色"},{"ion":"亞鐵離子","color":"淺綠色"},{"ion":"鐵離子","color":"黃色"},{"ion":"錳離子","color":"極淺粉紅色"},{"ion":"鈷離子","color":"紅色"},{"ion":"鎳離子","color":"綠色"},{"ion":"鉻離子","color":"綠色"},{"ion":"鉻酸根離子","color":"黃色"},{"ion":"重鉻酸根離子","color":"橙色"},{"ion":"高錳酸根離子","color":"紫色"},{"ion":"錳酸根離子","color":"綠色"},]) }
