@@ -26,6 +26,12 @@ export default function handler(req, res) {
                 "description": "Some of the very common elements in chemisty"
             },
             {
+                "subject": "chem",
+                "title": "chemical-solubility",
+                "year": "2023 S4",
+                "description": "Determine if a chemical is 可溶, 微溶 or 不可溶"
+            },
+            {
                 "subject": "chi",
                 "title": "s3-term1-exam-quotes",
                 "year": "2022 S3",
