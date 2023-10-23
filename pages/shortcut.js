@@ -6,11 +6,9 @@ function About() {
             <p className="text-xl font-bold">Shortcut</p>
             <p>Links for recent tests and exams</p>
             <br></br>
-            <Link className="text-l font-semibold text-blue-400 underline" href="/chem/chemical-solubility/chemical/solubility/blanks">2023高一第一段第一次化學測驗溶解性表</Link>
+            <Link className="text-l font-semibold text-blue-400 underline" href="/chi/s4-term1-test2-idioms/meaning/idiom/blanks">2023高一第一段第二次中文測驗熟語</Link>
             <br></br>
-            <Link className="text-l font-semibold text-blue-400 underline" href="/chem/ion-colors/ion/color/blanks">2023高一第一段第一次化學測驗離子顏色</Link>
-            <br></br>
-            <Link className="text-l font-semibold text-blue-400 underline" href="/chem/ion-names/ion/symbol/blanks">2023高一第一段第一次化學測驗離子名稱</Link>
+            <Link className="text-l font-semibold text-blue-400 underline" href="/chi/s4-term1-test2-quotes/first/whole/blanks">2023高一第一段第二次中文測驗名句</Link>
         </div>
     );
 }
