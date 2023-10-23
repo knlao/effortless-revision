@@ -12,7 +12,7 @@ function FITB(props) {
   const [definition, setDefinition] = useState('');
   const [word, setWord] = useState('');
 
-  const [lastAttempt, setLastAttempt] = useState(false);
+  const [lastAttempt, setLastAttempt] = useState(0); // 1: correct; 0: wrong; -1: skipped
 
   const [prevQuestion, setPrevQuestion] = useState("");
   const [prevCorrectAns, setPrevCorrectAns] = useState("");
@@ -34,14 +34,20 @@ function FITB(props) {
     e.preventDefault();
     console.log(input);
     if (input.trim() === word.trim()) {
-      setLastAttempt(true);
+      setLastAttempt(1);
       setMessage("You got the correct answer!");
       setPrevQuestion(definition);
       setPrevCorrectAns(word);
       setPrevUserAns(input);
       setCorrect(correct + 1);
+    } else if (input.trim() === "") {
+      setLastAttempt(-1);
+      setMessage("You skipped the question.");
+      setPrevQuestion(definition);
+      setPrevCorrectAns(word);
+      setPrevUserAns(input);
     } else {
-      setLastAttempt(false);
+      setLastAttempt(0);
       setMessage("You are wrong!");
       setPrevQuestion(definition);
       setPrevCorrectAns(word);
@@ -63,7 +69,7 @@ function FITB(props) {
         <input type="text" value={input} onChange={handleChange} className="border-solid border-2 border-b-black w-full py-1" />
       </form>
 
-      <p className={`${lastAttempt === true ? "text-green-500" : "text-red-600"}`}>{ message }</p>
+      <p className={`${lastAttempt === 1 ? "text-green-500" : (lastAttempt === 0 ? "text-red-600" : "text-gray-400")}`}>{ message }</p>
       
       <br></br>
 
