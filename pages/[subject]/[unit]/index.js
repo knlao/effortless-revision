@@ -29,6 +29,28 @@ function App() {
             ))}
             <br></br>
             <p className="text-2xl font-bold">! You need to type the link yourself !</p>
+            <br></br>
+            <div class="overflow-x-auto">
+                <table class="text-sm text-center text-gray-900">
+                    <thead class="text-xs uppercase bg-gray-50">
+                        <tr>
+                            {Object.keys(data[0]).map((a, i) => (
+                              <th scope="col" class="py-3 px-6" key={i}>{a}</th>
+                            ))}
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {data.map((d, i) => (
+                            <tr key={i} class="bg-white border-b">
+                              {Object.keys(data[0]).map((a, i) => (
+                                <td class="py-4" key={i}>{d[a]}</td>
+                              ))}
+                            </tr>
+                        ))}
+
+                    </tbody>
+                </table>
+            </div>
         </div> }
 
         <br></br>
