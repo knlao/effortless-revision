@@ -49,6 +49,14 @@ function Index() {
           </tr>
           <tr class="bg-white border-b">
             <th scope="row" class="py-4 px-6 font-medium whitespace-nowrap">
+              bio
+            </th>
+            <td class="py-4 px-6">
+              Biology
+            </td>
+          </tr>
+          <tr class="bg-white border-b">
+            <th scope="row" class="py-4 px-6 font-medium whitespace-nowrap">
               misc
             </th>
             <td class="py-4 px-6">
