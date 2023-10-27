@@ -87,9 +87,15 @@ export default function handler(req, res) {
             },
             {
                 "subject": "bio",
-                "title": "s4-term1-bigtest-words",
+                "title": "s4-term1-ch7-words",
                 "year": "2023 S4",
-                "description": "Chinese and English words for the test"
+                "description": "Chinese and English words for chapter 7"
+            },
+            {
+                "subject": "bio",
+                "title": "s4-term1-ch8-words",
+                "year": "2023 S4",
+                "description": "Chinese and English words for chapter 8"
             },
             {
                 "subject": "misc",
