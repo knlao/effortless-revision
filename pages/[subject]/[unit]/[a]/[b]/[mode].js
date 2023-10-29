@@ -50,7 +50,7 @@ function App() {
           <p><span className='font-bold'>Question:</span> {a}</p>
           <p><span className='font-bold'>Answer:</span> {b}</p>
           <p><span className='font-bold'>Mode:</span> {mode}</p>
-          <p><span className='font-bold'>API Link:</span> <span className="underline"><Link href={apiLink}>{apiLink}</Link></span></p>
+          <p><span className='font-bold'>API Link:</span> <span className="underline"><a href={apiLink} target='_blank' rel="noreferrer">{apiLink}</a></span></p>
         </div>
     </div>
   )
