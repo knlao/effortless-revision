@@ -2,9 +2,9 @@ import Link from 'next/link';
 import { useRouter } from 'next/router'
 import { useState, useEffect } from 'react';
 
-import useFetch from '../../../../../src/components/useFetch';
-import MCQ from '../../../../../src/components/mcq';
-import FITB from '../../../../../src/components/fitb';
+import useFetch from '../../../../../src/functions/useFetch';
+import Choices from '../../../../../src/components/choices';
+import Blanks from '../../../../../src/components/blanks';
 
 function App() {
   const router = useRouter()
@@ -21,9 +21,9 @@ function App() {
 
   let content = null;
   if (mode === "choices") {
-    content = <MCQ words={data} a={a} b={b}></MCQ>;
+    content = <Choices words={data} a={a} b={b}></Choices>;
   } else if (mode === "blanks") {
-    content = <FITB words={data} a={a} b={b}></FITB>
+    content = <Blanks words={data} a={a} b={b}></Blanks>
   } else {
     content = <div>not found</div>
   }

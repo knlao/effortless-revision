@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import randomizeArray from './randomizeArray';
+import randomizeArray from '../functions/randomizeArray';
 
-function FITB(props) {
+function Blanks(props) {
   const [message, setMessage] = useState(" ");
 
   const [correct, setCorrect] = useState(0);
@@ -99,4 +99,4 @@ function FITB(props) {
   );
 }
 
-export default FITB;
+export default Blanks;

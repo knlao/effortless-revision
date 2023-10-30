@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import Choice from './choice.js';
-import randomizeArray from './randomizeArray.js';
+import randomizeArray from '../functions/randomizeArray.js';
 
-function MCQ(props) {
+function Choices(props) {
   const items = 4;
   const correctIndex = Math.floor(Math.random() * items);
 
@@ -82,4 +82,4 @@ function MCQ(props) {
   );
 }
 
-export default MCQ;
+export default Choices;
