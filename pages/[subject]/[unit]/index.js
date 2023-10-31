@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router'
 import { useState, useEffect } from 'react';
 
-import useFetch from '../../../src/components/useFetch';
+import useFetch from '../../../src/functions/useFetch';
 
 function App() {
   const router = useRouter()

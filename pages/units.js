@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-import useFetch from '../src/components/useFetch';
+import useFetch from '../src/functions/useFetch';
 
 function About() {
     const { data, isPending, error } = useFetch("/api");
