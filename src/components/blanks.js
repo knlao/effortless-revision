@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import randomizeArray from '../functions/randomizeArray';
+import weightedRandomizeArray from '../functions/weightedRandomizeArray';
 
 function Blanks(props) {
   const [message, setMessage] = useState(" ");
@@ -18,14 +19,29 @@ function Blanks(props) {
   const [prevCorrectAns, setPrevCorrectAns] = useState("");
   const [prevUserAns, setPrevUserAns] = useState("");
 
+  const [wordsWeight, setWordsWeight] = useState([]);
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+
   const a = props.a;
   const b = props.b;
   
   useEffect(() => {
-    const words = randomizeArray(props.words);
+    // const words = randomizeArray(props.words);
+    if (wordsWeight.length == 0 && props.words.length != 0) {
+      for (let i = 0; i < props.words.length; i++) {
+        wordsWeight.push(4);
+      }
+      // console.log(wordsWeight);
+    }
+    const word = weightedRandomizeArray(props.words, wordsWeight);
+    setDefinition(word.item[props.a]);
+    setWord(word.item[props.b]);
+    setCurrentIndex(word.index);
+    // console.log(wordsWeight);
 
-    setDefinition(words[0][props.a])
-    setWord(words[0][props.b])
+    // setDefinition(words[0][props.a])
+    // setWord(words[0][props.b])
 
     setInput('')
   }, [total, props]);
@@ -40,6 +56,15 @@ function Blanks(props) {
       setPrevCorrectAns(word);
       setPrevUserAns(input);
       setCorrect(correct + 1);
+
+      const newWeights = wordsWeight.map((w, i) => {
+        if (i === currentIndex && w - 2 >= 1) {
+          return w - 2;
+        } else {
+          return w;
+        }
+      });
+      setWordsWeight(newWeights);
     } else if (input.trim() === "") {
       setLastAttempt(-1);
       setMessage("You skipped the question.");
@@ -53,6 +78,15 @@ function Blanks(props) {
       setPrevCorrectAns(word);
       setPrevUserAns(input);
       setIncorrect(incorrect + 1);
+      
+      const newWeights = wordsWeight.map((w, i) => {
+        if (i === currentIndex) {
+          return w + 4;
+        } else {
+          return w;
+        }
+      });
+      setWordsWeight(newWeights);
     }
     setTotal(total + 1);
   }
