@@ -34,6 +34,7 @@ function App() {
                 <table class="text-sm text-center text-gray-900">
                     <thead class="text-xs uppercase bg-gray-50">
                         <tr>
+                          <th scope="col" class="py-3 px-6">index</th>
                             {Object.keys(data[0]).map((a, i) => (
                               <th scope="col" class="py-3 px-6" key={i}>{a}</th>
                             ))}
@@ -42,6 +43,7 @@ function App() {
                     <tbody>
                         {data.map((d, i) => (
                             <tr key={i} class="bg-white border-b">
+                              <td class="py-4">{i+1}</td>
                               {Object.keys(data[0]).map((a, i) => (
                                 <td class="py-4" key={i}>{d[a]}</td>
                               ))}
