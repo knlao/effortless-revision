@@ -100,7 +100,8 @@ function Blanks(props) {
       <h1 className="text-3xl font-bold pb-3">Question: {definition}</h1>
 
       <form onSubmit={handleSubmit}>
-        <input type="text" value={input} onChange={handleChange} className="border-solid border-2 border-b-black w-full py-1" />
+        <input type="text" value={input} onChange={handleChange} className="border-solid border-2 border-b-black w-11/12 rounded py-1" />
+        <button class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-1.5 rounded w-1/12">Go</button>
       </form>
 
       <p className={`${lastAttempt === 1 ? "text-green-500" : (lastAttempt === 0 ? "text-red-600" : "text-gray-400")}`}>{ message }</p>
