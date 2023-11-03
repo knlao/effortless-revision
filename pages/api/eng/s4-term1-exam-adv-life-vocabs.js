@@ -24,7 +24,7 @@ export default function handler(req, res) { res.status(200).json([
     {"eng":"aesthetically","chi":"美學地"},
     {"eng":"conversely","chi":"反過來"},
     {"eng":"converse","chi":"和……交談"},
-    {"eng":"perceptition","chi":"見解"},
+    {"eng":"perception","chi":"見解"},
     {"eng":"perceive","chi":"認為"},
     {"eng":"agricultural","chi":"農業的"},
     {"eng":"agriculture","chi":"農業"},
