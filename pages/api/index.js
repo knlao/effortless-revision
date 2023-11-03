@@ -14,6 +14,18 @@ export default function handler(req, res) {
                 "description": "Oxford English 3B unit 7 vocabularies"
             },
             {
+                "subject": "eng",
+                "title": "s4-term1-exam-adv-aa-vocabs",
+                "year": "2023 S4",
+                "description": "First term exam vocabularies in aa for advanced class"
+            },
+            {
+                "subject": "eng",
+                "title": "s4-term1-exam-adv-life-vocabs",
+                "year": "2023 S4",
+                "description": "First term exam vocabularies in life for advanced class"
+            },
+            {
                 "subject": "chem",
                 "title": "common-elements",
                 "year": "/",
