@@ -59,7 +59,7 @@ export default function handler(req, res) {
         { "eng": "acquire", "chi": "獲得" },
         { "eng": "acquisition", "chi": "獲得某物的過程" },
         {"eng":"blockbuster","chi":"非常成功的書或影片"},
-        {"eng":"confort zone","chi":"舒適區"},
+        {"eng":"comfort zone","chi":"舒適區"},
         {"eng":"cotton on","chi":"明白"},
         {"eng":"endurance","chi":"忍耐力"},
         {"eng":"exaggeration","chi":"誇張"},
