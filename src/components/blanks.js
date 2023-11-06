@@ -25,20 +25,25 @@ function Blanks(props) {
   const a = props.a;
   const b = props.b;
 
-  const weightChangePercentage = 2;
+  // const weightChange = 2;
+  const [weightChange, setWeightChange] = useState(0);
+  const weightChangePercentage = 3;
   
   useEffect(() => {
     // const words = randomizeArray(props.words);
     if (wordsWeight.length == 0 && props.words.length != 0) {
+      setWeightChange(props.words.length*weightChangePercentage);
+      let w = props.words.length*weightChangePercentage;
       for (let i = 0; i < props.words.length; i++) {
-        wordsWeight.push(1+Math.round(props.words.length * weightChangePercentage)*2);
+        wordsWeight.push(1+w*3);
       }
     }
+    console.log(weightChange);
     const word = weightedRandomizeArray(props.words, wordsWeight);
     setDefinition(word.item[props.a]);
     setWord(word.item[props.b]);
     setCurrentIndex(word.index);
-    // console.log(wordsWeight);
+    console.log(wordsWeight);
 
     // setDefinition(words[0][props.a])
     // setWord(words[0][props.b])
@@ -58,8 +63,8 @@ function Blanks(props) {
       setCorrect(correct + 1);
 
       const newWeights = wordsWeight.map((w, i) => {
-        if (i === currentIndex && w - Math.round(props.words.length * weightChangePercentage) >= 1) {
-          return w - Math.round(props.words.length * weightChangePercentage);
+        if (i === currentIndex && w - weightChange >= 1) {
+          return w - weightChange;
         } else {
           return w;
         }
@@ -81,7 +86,7 @@ function Blanks(props) {
       
       const newWeights = wordsWeight.map((w, i) => {
         if (i === currentIndex) {
-          return w + Math.round(props.words.length * weightChangePercentage);
+          return w + weightChange;
         } else {
           return w;
         }
