@@ -1,10 +1,12 @@
 import Link from "next/link";
+import Head from "next/head"
 
 function Index() {
   // const 
 
   return (
     <div>
+      <Head><title>Index - Effortless Revision</title></Head>
       <p className="text-2xl font-bold">! You need to type the link yourself !</p>
       <br></br>
       <p className="text-xl font-bold">Link Subdirectory Structure:</p>

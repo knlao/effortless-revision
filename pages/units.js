@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Head from 'next/head'
 
 import useFetch from '../src/functions/useFetch';
 
@@ -7,6 +8,7 @@ function About() {
 
     return (
         <div className="w-full">
+            <Head><title>Units - Effortless Revision</title></Head>
             <p className="text-xl font-bold">List of Units</p>
             {error && <div>{error}</div>}
             {isPending && <div>Loading...</div>}

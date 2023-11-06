@@ -1,6 +1,9 @@
+import Head from "next/head"
+
 function About() {
     return (
         <div>
+            <Head><title>About - Effortless Revision</title></Head>
             <p>This is like Quizlet, but it is <span className="underline">free</span>.</p>
             <br></br>
             <p className="text-lg">About Me</p>

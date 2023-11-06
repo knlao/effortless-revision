@@ -1,8 +1,10 @@
 import Link from "next/link"
+import Head from "next/head"
 
 function About() {
     return (
         <div>
+            <Head><title>Shortcut - Effortless Revision</title></Head>
             <p className="text-xl font-bold">Shortcut</p>
             <p>Maybe useful links for recent tests and exams</p>
             <Link className="text-l font-semibold text-blue-400 underline" href="/eng/s4-term1-exam-adv-aa-vocabs/chi/eng/blanks">高一第一段考試進階英文AthensAnthology生字</Link>

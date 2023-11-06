@@ -1,5 +1,6 @@
 import { useRouter } from 'next/router'
 import { useState, useEffect } from 'react';
+import Head from 'next/head';
 
 import useFetch from '../../../src/functions/useFetch';
 
@@ -20,6 +21,7 @@ function App() {
 
   return (
     <div>
+        <Head><title>{unit} - Effortless Revision</title></Head>
         { error && <div>{ error }</div> }
         { isPending && <div>Loading...</div> }
         { data && <div>

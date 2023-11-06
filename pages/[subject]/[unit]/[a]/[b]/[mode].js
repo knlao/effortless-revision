@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router'
 import { useState, useEffect } from 'react';
+import Head from 'next/head'
 
 import useFetch from '../../../../../src/functions/useFetch';
 import Choices from '../../../../../src/components/choices';
@@ -33,6 +34,8 @@ function App() {
         { error && <div>{ error }</div> }
         { isPending && <div>Loading...</div> }
         { data && content }
+
+        <Head><title>{unit} - Effortless Revision</title></Head>
 
         <br></br><br></br>
         <div className='text-gray-400 text-xs'>
