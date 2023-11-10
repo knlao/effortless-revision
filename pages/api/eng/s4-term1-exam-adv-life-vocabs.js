@@ -46,5 +46,5 @@ export default function handler(req, res) { res.status(200).json([
     {"eng":"take sth at face value","chi":"僅憑表像對…信以為真"},
     {"eng":"keep a straight face","chi":"板著臉"},
     {"eng":"face the music","chi":"接受批評或懲罰"},
-    {"eng":"one the face of it","chi":"從表面看"},
+    {"eng":"on the face of it","chi":"從表面看"},
     ]) }
