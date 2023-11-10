@@ -53,7 +53,7 @@ export default function handler(req, res) {
                 "subject": "chem",
                 "title": "chemical-solubility",
                 "year": "/",
-                "description": "Determine if a chemical is 可溶 or 不溶"
+                "description": "Determine if a chemical is 可溶, 微溶 or 不溶"
             },
             {
                 "subject": "chi",
