@@ -10,7 +10,7 @@ export default function handler(req, res) {
         { "eng": "recruitment", "chi": "招聘" },
         { "eng": "red tape", "chi": "拖拉費時的繁瑣手續" },
         { "eng": "settle in", "chi": "安頓下來" },
-        { "eng": "adaptable", "chi": "適應性環境" },
+        { "eng": "adaptable", "chi": "適應性強的" },
         { "eng": "competent", "chi": "能幹的" },
         { "eng": "diligent", "chi": "認真刻苦的" },
         { "eng": "efficient", "chi": "效率高的" },
