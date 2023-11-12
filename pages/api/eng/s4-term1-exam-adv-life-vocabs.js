@@ -15,7 +15,7 @@ export default function handler(req, res) { res.status(200).json([
     {"eng":"specialist","chi":"專家"},
     {"eng":"specialize","chi":"專門研究"},
     {"eng":"priority","chi":"優先考慮的事"},
-    {"eng":"priortize","chi":"確定事項的優先次序"},
+    {"eng":"prioritize","chi":"確定事項的優先次序"},
     {"eng":"enigma","chi":"謎團"},
     {"eng":"characteristic","chi":"特徵 (人, 物)"},
     {"eng":"feature","chi":"特徵 (物)"},
