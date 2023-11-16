@@ -18,6 +18,8 @@ function About() {
             <Link className="text-l font-semibold text-blue-400 underline" href="/chi/s4-term1-exam-quotes/first/whole/blanks">高一第一段中文考試名句</Link>
             <br></br>
             <Link className="text-l font-semibold text-blue-400 underline" href="/chem/chemical-solubility/chemical/solubility/blanks">化學溶解性表</Link>
+            <br></br>
+            <a className="text-l font-semibold text-blue-400 underline" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">考試加油</a>
         </div>
     );
 }
