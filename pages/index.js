@@ -7,7 +7,13 @@ function Index() {
   return (
     <div>
       <Head><title>Index - Effortless Revision</title></Head>
-      <p className="text-2xl font-bold">! You need to type the link yourself !</p>
+      <p className="text-4xl font-bold">Effortless Revision</p>
+      <p className="italic">This is like Quizlet, but it is free!</p>
+      <br></br>
+      <Link className="text-2xl font-bold text-blue-400 underline" href="/units">{"-> Start Your Revision <-"}</Link>
+      <br></br>
+      <br></br>
+      <p className="text-2xl font-semibold">! You need to type the link yourself !</p>
       <br></br>
       <p className="text-xl font-bold">Link Subdirectory Structure:</p>
       <p>/<span className="text-red-600"> [subject] </span>/<span className="text-yellow-500"> [unit] </span>/<span className="text-blue-600"> [question] </span>/<span className="text-green-600"> [answer] </span>/<span className="text-purple-600"> [mode] </span></p>

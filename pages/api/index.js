@@ -27,7 +27,7 @@ export default function handler(req, res) {
             },
             {
                 "subject": "eng",
-                "title": "s4-term2-exam-adv-life-vocabs",
+                "title": "s4-term2-human-qualities-vocabs",
                 "year": "2023 S4",
                 "description": "18 vocabularies about human qualities"
             },
