@@ -26,6 +26,12 @@ export default function handler(req, res) {
                 "description": "First term exam vocabularies in life for advanced class"
             },
             {
+                "subject": "eng",
+                "title": "s4-term2-exam-adv-life-vocabs",
+                "year": "2023 S4",
+                "description": "18 vocabularies about human qualities"
+            },
+            {
                 "subject": "chem",
                 "title": "common-elements",
                 "year": "/",
