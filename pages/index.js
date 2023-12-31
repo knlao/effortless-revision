@@ -19,55 +19,55 @@ function Index() {
       <p>/<span className="text-red-600"> [subject] </span>/<span className="text-yellow-500"> [unit] </span>/<span className="text-blue-600"> [question] </span>/<span className="text-green-600"> [answer] </span>/<span className="text-purple-600"> [mode] </span></p>
       
       <p className="mt-2 text-l font-bold">Subject:</p>
-      <table class="w-2/3 text-sm text-center text-gray-900">
-        <thead class="text-xs uppercase bg-gray-50">
+      <table className="w-2/3 text-sm text-center text-gray-900">
+        <thead className="text-xs uppercase bg-gray-50">
           <tr>
-            <th scope="col" class="py-3 px-6">
+            <th scope="col" className="py-3 px-6">
               Subject
             </th>
-            <th scope="col" class="py-3 px-6">
+            <th scope="col" className="py-3 px-6">
               Meaning
             </th>
           </tr>
         </thead>
         <tbody>
-          <tr class="bg-white border-b">
-            <th scope="row" class="py-4 px-6 font-medium whitespace-nowrap">
+          <tr className="bg-white border-b">
+            <th scope="row" className="py-4 px-6 font-medium whitespace-nowrap">
               eng
             </th>
-            <td class="py-4 px-6">
+            <td className="py-4 px-6">
               English
             </td>
           </tr>
-          <tr class="bg-white border-b">
-            <th scope="row" class="py-4 px-6 font-medium whitespace-nowrap">
+          <tr className="bg-white border-b">
+            <th scope="row" className="py-4 px-6 font-medium whitespace-nowrap">
               chi
             </th>
-            <td class="py-4 px-6">
+            <td className="py-4 px-6">
               Chinese
             </td>
           </tr>
-          <tr class="bg-white border-b">
-            <th scope="row" class="py-4 px-6 font-medium whitespace-nowrap">
+          <tr className="bg-white border-b">
+            <th scope="row" className="py-4 px-6 font-medium whitespace-nowrap">
               chem
             </th>
-            <td class="py-4 px-6">
+            <td className="py-4 px-6">
               Chemistry
             </td>
           </tr>
-          <tr class="bg-white border-b">
-            <th scope="row" class="py-4 px-6 font-medium whitespace-nowrap">
+          <tr className="bg-white border-b">
+            <th scope="row" className="py-4 px-6 font-medium whitespace-nowrap">
               bio
             </th>
-            <td class="py-4 px-6">
+            <td className="py-4 px-6">
               Biology
             </td>
           </tr>
-          <tr class="bg-white border-b">
-            <th scope="row" class="py-4 px-6 font-medium whitespace-nowrap">
+          <tr className="bg-white border-b">
+            <th scope="row" className="py-4 px-6 font-medium whitespace-nowrap">
               misc
             </th>
-            <td class="py-4 px-6">
+            <td className="py-4 px-6">
               Miscellaneous
             </td>
           </tr>
@@ -80,31 +80,31 @@ function Index() {
       <p className="mt-2 text-l font-bold">Answer:</p>
       <p>Please see <Link className="underline decoration-solid text-blue-400" href="/units">Units</Link></p>
       <p className="mt-2 text-l font-bold">Mode:</p>
-      <table class="w-2/3 text-sm text-center text-gray-900">
-        <thead class="text-xs uppercase bg-gray-50">
+      <table className="w-2/3 text-sm text-center text-gray-900">
+        <thead className="text-xs uppercase bg-gray-50">
           <tr>
-            <th scope="col" class="py-3 px-6">
+            <th scope="col" className="py-3 px-6">
               Mode
             </th>
-            <th scope="col" class="py-3 px-6">
+            <th scope="col" className="py-3 px-6">
               Meaning
             </th>
           </tr>
         </thead>
         <tbody>
-          <tr class="bg-white border-b">
-            <th scope="row" class="py-4 px-6 font-medium whitespace-nowrap">
+          <tr className="bg-white border-b">
+            <th scope="row" className="py-4 px-6 font-medium whitespace-nowrap">
               choices
             </th>
-            <td class="py-4 px-6">
+            <td className="py-4 px-6">
               Multiple Choice Question
             </td>
           </tr>
-          <tr class="bg-white border-b">
-            <th scope="row" class="py-4 px-6 font-medium whitespace-nowrap">
+          <tr className="bg-white border-b">
+            <th scope="row" className="py-4 px-6 font-medium whitespace-nowrap">
               blanks
             </th>
-            <td class="py-4 px-6">
+            <td className="py-4 px-6">
               Fill In The Blanks
             </td>
           </tr>

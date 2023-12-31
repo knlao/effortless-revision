@@ -128,6 +128,18 @@ export default function handler(req, res) {
                 "description": "Quotes for term 1 chinese exam"
             },
             {
+                "subject": "chi",
+                "title": "s4-term2-test1-quotes",
+                "year": "2023 S4",
+                "description": "Quotes for term 2 chinese test 1"
+            },
+            {
+                "subject": "chi",
+                "title": "s4-term2-test1-idioms",
+                "year": "2023 S4",
+                "description": "Idioms for term 2 chinese test 1"
+            },
+            {
                 "subject": "bio",
                 "title": "s4-term1-ch7-words",
                 "year": "2023 S4",

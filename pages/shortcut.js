@@ -10,9 +10,12 @@ function About() {
             <br></br>
             <Link className="text-l font-semibold text-blue-400 underline" href="/eng/s4-aa-unit16-vocabs/chi/eng/blanks">AA Unit 16 Vocabularies</Link>
             <br></br>
-            <Link className="text-l font-semibold text-blue-400 underline" href="/misc/fruits/a/b/blanks">Test Link Please Ignore</Link>
+            <Link className="text-l font-semibold text-blue-400 underline" href="/chi/s4-term2-test1-quotes/first/whole">第二段第一次中文測驗名句</Link>
             <br></br>
-            <a className="text-l font-semibold text-blue-400 underline" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">yeet</a>
+            <Link className="text-l font-semibold text-blue-400 underline" href="/chi/s4-term2-test1-idioms/pinyin/idiom">第二段第一次中文測驗成語</Link>
+            <br></br>
+            <br></br>
+            <Link className="text-l font-semibold text-blue-400 underline" href="/misc/fruits/a/b/blanks">Test Link Please Ignore</Link>
         </div>
     );
 }
