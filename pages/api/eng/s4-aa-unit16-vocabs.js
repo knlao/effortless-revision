@@ -17,7 +17,7 @@ export default function handler(req, res) { res.status(200).json([
     {"eng":"commitment","chi":"(n.)承諾"},
     {"eng":"appoint","chi":"(v.)任命; (v.)安排"},
     {"eng":"appointment","chi":"(n.)任命; (n.)預約"},
-    {"eng":"underprivileged","chi":"(adj.)貧困的"},
+    {"eng":"underprivileged","chi":"(adj.)屬於弱勢群體的"},
     {"eng":"modest","chi":"(adj.)謙虛的"},
     {"eng":"modesty","chi":"(n.)謙虛"},
     ]) }
