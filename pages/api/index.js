@@ -38,6 +38,12 @@ export default function handler(req, res) {
                 "description": "AA unit 16 vocabulary list"
             },
             {
+                "subject": "eng",
+                "title": "s4-term2-exam-adv-vocabs",
+                "year": "2023 S4",
+                "description": "Second term exam vocabularies for advanced class"
+            },
+            {
                 "subject": "chem",
                 "title": "common-elements",
                 "year": "/",
