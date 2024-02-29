@@ -9,7 +9,7 @@ function Blanks(props) {
   const [incorrect, setIncorrect] = useState(0);
   const [total, setTotal] = useState(0);
   const [input, setInput] = useState("");
-  
+
   const [definition, setDefinition] = useState('');
   const [word, setWord] = useState('');
 
@@ -18,6 +18,7 @@ function Blanks(props) {
   const [prevQuestion, setPrevQuestion] = useState("");
   const [prevCorrectAns, setPrevCorrectAns] = useState("");
   const [prevUserAns, setPrevUserAns] = useState("");
+  const [prevWordWeight, setPrevWordWeight] = useState(0);
 
   const [wordsWeight, setWordsWeight] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -28,14 +29,14 @@ function Blanks(props) {
   // const weightChange = 2;
   const [weightChange, setWeightChange] = useState(0);
   const weightChangePercentage = 3;
-  
+
   useEffect(() => {
     // const words = randomizeArray(props.words);
     if (wordsWeight.length == 0 && props.words.length != 0) {
-      setWeightChange(props.words.length*weightChangePercentage);
-      let w = props.words.length*weightChangePercentage;
+      setWeightChange(props.words.length * weightChangePercentage);
+      let w = props.words.length * weightChangePercentage;
       for (let i = 0; i < props.words.length; i++) {
-        wordsWeight.push(1+w*3);
+        wordsWeight.push(1 + w * 3);
       }
     }
     console.log(weightChange);
@@ -48,7 +49,7 @@ function Blanks(props) {
     // setDefinition(words[0][props.a])
     // setWord(words[0][props.b])
 
-    setInput('')
+    setInput('');
   }, [total, props]);
 
   function handleSubmit(e) {
@@ -61,6 +62,7 @@ function Blanks(props) {
       setPrevCorrectAns(word);
       setPrevUserAns(input);
       setCorrect(correct + 1);
+      setPrevWordWeight(wordsWeight[props.words.findIndex((e) => e.word === word)] - weightChange);
 
       const newWeights = wordsWeight.map((w, i) => {
         if (i === currentIndex && w - weightChange >= 1) {
@@ -76,6 +78,7 @@ function Blanks(props) {
       setPrevQuestion(definition);
       setPrevCorrectAns(word);
       setPrevUserAns(input);
+      setPrevWordWeight(wordsWeight[props.words.findIndex((e) => e.word === word)]);
     } else {
       setLastAttempt(0);
       setMessage("You are wrong!");
@@ -83,7 +86,8 @@ function Blanks(props) {
       setPrevCorrectAns(word);
       setPrevUserAns(input);
       setIncorrect(incorrect + 1);
-      
+      setPrevWordWeight(wordsWeight[props.words.findIndex((e) => e.word === word)] + weightChange);
+
       const newWeights = wordsWeight.map((w, i) => {
         if (i === currentIndex) {
           return w + weightChange;
@@ -102,22 +106,22 @@ function Blanks(props) {
 
   return (
     <div>
-      <h1 className="text-3xl font-bold pb-3">Question: {definition}</h1>
+      <h1 className="text-3xl font-bold pb-3">Question: {definition} <span className="text-gray-400">({wordsWeight[props.words.findIndex((e) => e.word === word)]})</span></h1>
 
       <form onSubmit={handleSubmit}>
         <input type="text" value={input} onChange={handleChange} className="border-solid border-2 border-b-black w-11/12 rounded py-1" />
         <button class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-1.5 rounded w-1/12">Go</button>
       </form>
 
-      <p className={`${lastAttempt === 1 ? "text-green-500" : (lastAttempt === 0 ? "text-red-600" : "text-gray-400")}`}>{ message }</p>
-      
+      <p className={`${lastAttempt === 1 ? "text-green-500" : (lastAttempt === 0 ? "text-red-600" : "text-gray-400")}`}>{message}</p>
+
       <br></br>
 
       <table>
         <tbody>
           <tr>
             <td className='pr-6'>Previous Question:</td>
-            <td>{prevQuestion}</td>
+            <td>{prevQuestion} <span className="text-gray-400">({prevWordWeight})</span></td>
           </tr>
           <tr>
             <td>Correct Answer:</td>
